@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">ListaVIP</string>
+    <string name="strAppName">VIPList</string>
+    <string name="strFirstName">First Name</string>
+    <string name="strSurname">Surname</string>
+    <string name="strIntendedCourse">Intended Course</string>
+    <string name="strPhoneNumber">Phone Number</string>
+    <string name="strBtnClear">CLEAR</string>
+    <string name="strBtnSave">SAVE</string>
+    <string name="strBtnSubmit">SUBMIT</string>
 </resources>
