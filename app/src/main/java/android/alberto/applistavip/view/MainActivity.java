@@ -1,7 +1,8 @@
-package android.alberto.applistavip;
+package android.alberto.applistavip.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.alberto.applistavip.R;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {

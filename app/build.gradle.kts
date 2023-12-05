@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "android.alberto.applistavip"
-    compileSdk = 33
+    compileSdk = 34 //was 33
 
     defaultConfig {
         applicationId = "android.alberto.applistavip"
         minSdk = 30
-        targetSdk = 33
+        targetSdk = 34 //was 33
         versionCode = 1
         versionName = "1.0"
 
