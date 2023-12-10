@@ -3,6 +3,7 @@ package android.alberto.applistavip.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.alberto.applistavip.R;
+import android.alberto.applistavip.controller.UserController;
 import android.alberto.applistavip.model.User;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
             "Computing",
             "93 991853287"
     );
+    UserController controller = new UserController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,5 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Resposta salva: " + user.toString(), Toast.LENGTH_LONG).show();
             }
         });
+        controller.saveInfo(user);
     }
 }

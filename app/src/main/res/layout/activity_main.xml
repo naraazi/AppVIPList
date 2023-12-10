@@ -10,9 +10,9 @@
         android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/strAppName"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:text="@string/strAppName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -25,56 +25,56 @@
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
+        android:autofillHints=""
         android:ems="10"
-        android:inputType="text"
         android:hint="@string/strFirstname"
+        android:inputType="text"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
 
     <EditText
         android:id="@+id/editTextSurname"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
+        android:autofillHints=""
         android:ems="10"
-        android:inputType="text"
         android:hint="@string/strSurname"
+        android:inputType="text"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFirstname"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextFirstname" />
 
     <EditText
         android:id="@+id/editTextIntendedCourse"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
+        android:autofillHints=""
         android:ems="10"
-        android:inputType="text"
         android:hint="@string/strIntendedCourse"
+        android:inputType="text"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSurname"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSurname" />
 
     <EditText
         android:id="@+id/editTextContactNum"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
+        android:autofillHints=""
         android:ems="10"
-        android:inputType="phone"
         android:hint="@string/strPhoneNumber"
+        android:inputType="phone"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextIntendedCourse"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextIntendedCourse" />
 
     <Button
         android:id="@+id/btnClear"
