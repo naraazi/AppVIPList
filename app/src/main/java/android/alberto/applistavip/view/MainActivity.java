@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.alberto.applistavip.R;
 import android.alberto.applistavip.controller.UserController;
 import android.alberto.applistavip.model.User;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    SharedPreferences preferences;
+    SharedPreferences.Editor VIPList;
+    
     User user = new User(
             "Lorenzo",
             "Alberto",
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        preferences = getSharedPreferences("simpleUserData", 0);
+        VIPList = preferences.edit();
 
         EditText editTextFirstname = findViewById(R.id.editTextFirstname);
         EditText editTextSurname = findViewById(R.id.editTextSurname);
@@ -33,38 +38,34 @@ public class MainActivity extends AppCompatActivity {
         Button btnSave = findViewById(R.id.btnSave);
         Button btnSubmit = findViewById(R.id.btnSubmit);
 
-        // editTextFirstName.setText(user.getFirstName()); -- showed in the screen
-
-        btnClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                editTextFirstname.setText("");
-                editTextSurname.setText("");
-                editTextIntendedCourse.setText("");
-                editTextContactNum.setText("");
-            }
+        btnClear.setOnClickListener(v -> {
+            editTextFirstname.setText("");
+            editTextSurname.setText("");
+            editTextIntendedCourse.setText("");
+            editTextContactNum.setText("");
         });
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Finalizado", Toast.LENGTH_LONG).show();
+        btnSubmit.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Finished", Toast.LENGTH_LONG).show();
 
-                finish();
-            }
+            finish();
         });
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                user.setFirstname(editTextFirstname.getText().toString());
-                user.setSurname(editTextSurname.getText().toString());
-                user.setIntendedCourse(editTextIntendedCourse.getText().toString());
-                user.setPhoneNumber(editTextContactNum.getText().toString());
+        btnSave.setOnClickListener(v -> {
+            user.setFirstname(editTextFirstname.getText().toString());
+            user.setSurname(editTextSurname.getText().toString());
+            user.setIntendedCourse(editTextIntendedCourse.getText().toString());
+            user.setPhoneNumber(editTextContactNum.getText().toString());
 
-                Toast.makeText(MainActivity.this, "Resposta salva: " + user.toString(), Toast.LENGTH_LONG).show();
-            }
+            Toast.makeText(MainActivity.this, "Saved data: " + user.toString(), Toast.LENGTH_LONG).show();
+
+            VIPList.putString("firstname", user.getFirstname());
+            VIPList.putString("surname", user.getSurname());
+            VIPList.putString("intendedCourse", user.getIntendedCourse());
+            VIPList.putString("contactNum", user.getPhoneNumber());
+            VIPList.apply();
+
+            controller.saveInfo(user);
         });
-        controller.saveInfo(user);
     }
 }
