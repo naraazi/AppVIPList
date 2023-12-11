@@ -13,22 +13,17 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences preferences;
-    SharedPreferences.Editor VIPList;
-    
-    User user = new User(
-            "Lorenzo",
-            "Alberto",
-            "Computing",
-            "93 991853287"
-    );
+    SharedPreferences.Editor saveSimpleUserData;
+
+    User user;
     UserController controller = new UserController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        preferences = getSharedPreferences("simpleUserData", 0);
-        VIPList = preferences.edit();
+        preferences = getSharedPreferences("saveSimpleUserData", 0);
+        saveSimpleUserData = preferences.edit();
 
         EditText editTextFirstname = findViewById(R.id.editTextFirstname);
         EditText editTextSurname = findViewById(R.id.editTextSurname);
@@ -43,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
             editTextSurname.setText("");
             editTextIntendedCourse.setText("");
             editTextContactNum.setText("");
+            Toast.makeText(MainActivity.this, "Cleaned", Toast.LENGTH_LONG).show();
+
+            saveSimpleUserData.clear();
+            saveSimpleUserData.apply();
         });
 
         btnSubmit.setOnClickListener(v -> {
@@ -59,11 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(MainActivity.this, "Saved data: " + user.toString(), Toast.LENGTH_LONG).show();
 
-            VIPList.putString("firstname", user.getFirstname());
-            VIPList.putString("surname", user.getSurname());
-            VIPList.putString("intendedCourse", user.getIntendedCourse());
-            VIPList.putString("contactNum", user.getPhoneNumber());
-            VIPList.apply();
+            saveSimpleUserData.putString("firstname", user.getFirstname());
+            saveSimpleUserData.putString("surname", user.getSurname());
+            saveSimpleUserData.putString("intendedCourse", user.getIntendedCourse());
+            saveSimpleUserData.putString("contactNum", user.getPhoneNumber());
+            saveSimpleUserData.apply();
 
             controller.saveInfo(user);
         });
