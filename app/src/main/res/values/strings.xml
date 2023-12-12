@@ -7,4 +7,5 @@
     <string name="strBtnClear">CLEAR</string>
     <string name="strBtnSave">SAVE</string>
     <string name="strBtnSubmit">SUBMIT</string>
+    <string name="strSpinnerIntendedCourse">Select Intended Course</string>
 </resources>

@@ -7,7 +7,7 @@
     tools:context=".view.MainActivity">
 
     <TextView
-        android:id="@+id/appTitle"
+        android:id="@+id/textViewAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/strAppName"
@@ -32,7 +32,7 @@
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle" />
 
     <EditText
         android:id="@+id/editTextSurname"
@@ -76,6 +76,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextIntendedCourse" />
 
+    <TextView
+        android:id="@+id/textViewSpinnerIntendedCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strSpinnerIntendedCourse"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerIntendedCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContactNum"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <Spinner
+        android:id="@+id/spinnerIntendedCourse"
+        android:layout_width="409dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContactNum"
+        app:layout_constraintVertical_bias="0.139" />
+
     <Button
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
@@ -114,8 +137,9 @@
         android:text="@string/strBtnSubmit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextContactNum"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
