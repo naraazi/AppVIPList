@@ -6,6 +6,8 @@ public class User {
     private String intendedCourse;
     private String phoneNumber;
 
+    public User() {}
+
     public User(String firstName, String surname, String intendedCourse, String phoneNumber) {
         this.firstname = firstName;
         this.surname = surname;
