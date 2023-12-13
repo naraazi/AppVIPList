@@ -1,7 +1,6 @@
 package android.alberto.applistavip.controller;
 
-import android.alberto.applistavip.model.User;
-import android.alberto.applistavip.view.MainActivity;
+import android.alberto.applistavip.model.entities.User;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -27,13 +26,12 @@ public class UserController {
         saveSimpleUserData.apply();
     }
 
-    public User getData(User user) {
+    public void getData(User user) { // used to return user
         user.setFirstname(preferences.getString("firstname", "--NOT FOUND--"));
         user.setSurname(preferences.getString("surname", "--NOT FOUND--"));
         user.setIntendedCourse(preferences.getString("intendedCourse", "--NOT FOUND--"));
         user.setPhoneNumber(preferences.getString("contactNum", "--NOT FOUND--"));
 
-        return user;
     }
 
     public void clean() {

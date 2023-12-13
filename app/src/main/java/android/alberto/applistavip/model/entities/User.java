@@ -1,4 +1,4 @@
-package android.alberto.applistavip.model;
+package android.alberto.applistavip.model.entities;
 
 public class User {
     private String firstname;

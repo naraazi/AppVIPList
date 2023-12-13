@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.alberto.applistavip.R;
 import android.alberto.applistavip.controller.UserController;
-import android.alberto.applistavip.model.User;
+import android.alberto.applistavip.model.entities.User;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
