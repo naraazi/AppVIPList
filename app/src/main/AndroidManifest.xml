@@ -10,10 +10,13 @@
         android:label="@string/strAppName"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ListaVIP"
+        android:theme="@style/Theme.VIPList"
         tools:targetApi="31">
         <activity
             android:name=".view.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
