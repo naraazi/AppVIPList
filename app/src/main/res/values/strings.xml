@@ -1,11 +1,12 @@
 <resources>
-    <string name="strAppName">VIPList</string>
-    <string name="strFirstname">First Name</string>
-    <string name="strSurname">Surname</string>
-    <string name="strIntendedCourse">Intended Course</string>
-    <string name="strPhoneNumber">Phone Number</string>
-    <string name="strBtnClear">CLEAR</string>
-    <string name="strBtnSave">SAVE</string>
-    <string name="strBtnSubmit">SUBMIT</string>
-    <string name="strSpinnerIntendedCourse">Select Intended Course</string>
+    <string name="str_app_name">VIPList</string>
+    <string name="str_firstname">First Name</string>
+    <string name="str_surname">Surname</string>
+    <string name="str_intended_course">Intended Course</string>
+    <string name="str_phone_number">Phone Number</string>
+    <string name="str_btn_clear">CLEAR</string>
+    <string name="str_btn_save">SAVE</string>
+    <string name="str_btn_submit">SUBMIT</string>
+    <string name="str_select_intended_course">Select Intended Course</string>
+    <string name="str_splash_image">Splash Image</string>
 </resources>
