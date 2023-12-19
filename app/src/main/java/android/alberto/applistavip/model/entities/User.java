@@ -1,7 +1,9 @@
 package android.alberto.applistavip.model.entities;
 
+import androidx.annotation.NonNull;
+
 public class User {
-    private String firstname;
+    private String firstName;
     private String surname;
     private String intendedCourse;
     private String phoneNumber;
@@ -9,18 +11,18 @@ public class User {
     public User() {}
 
     public User(String firstName, String surname, String intendedCourse, String phoneNumber) {
-        this.firstname = firstName;
+        this.firstName = firstName;
         this.surname = surname;
         this.intendedCourse = intendedCourse;
         this.phoneNumber = phoneNumber;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getSurname() {
@@ -47,10 +49,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "User{" +
-                "firstName='" + firstname + '\'' +
+                "firstName='" + firstName + '\'' +
                 ", surname='" + surname + '\'' +
                 ", intendedCourse='" + intendedCourse + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +

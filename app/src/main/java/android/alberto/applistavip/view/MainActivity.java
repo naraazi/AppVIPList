@@ -29,9 +29,8 @@ public class MainActivity extends AppCompatActivity {
         user = new User();
         courseController = new CourseController();
 
-        EditText editTextFirstname = findViewById(R.id.editTextFirstname);
+        EditText editTextFirstName = findViewById(R.id.editTextFirstName);
         EditText editTextSurname = findViewById(R.id.editTextSurname);
-//        EditText editTextIntendedCourse = findViewById(R.id.editTextIntendedCourse);
         EditText editTextContactNum = findViewById(R.id.editTextContactNum);
         Spinner spinnerIntendedCourse = findViewById(R.id.spinnerIntendedCourse);
         Button btnClear = findViewById(R.id.btnClear);
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         // SHOW THE DATA ON EDITTEXT PLACE
         userController.getData(user);
-        editTextFirstname.setText(user.getFirstname());
+        editTextFirstName.setText(user.getFirstName());
         editTextSurname.setText(user.getSurname());
         editTextContactNum.setText(user.getPhoneNumber());
 
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerIntendedCourse.setAdapter(arraySpinnerIntendedCourse);
 
         btnClear.setOnClickListener(v -> {
-            editTextFirstname.setText("");
+            editTextFirstName.setText("");
             editTextSurname.setText("");
             editTextContactNum.setText("");
             Toast.makeText(MainActivity.this, "Cleaned", Toast.LENGTH_LONG).show();
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnSave.setOnClickListener(v -> {
-            user.setFirstname(editTextFirstname.getText().toString());
+            user.setFirstName(editTextFirstName.getText().toString());
             user.setSurname(editTextSurname.getText().toString());
             user.setIntendedCourse(spinnerIntendedCourse.getSelectedItem().toString());
             user.setPhoneNumber(editTextContactNum.getText().toString());

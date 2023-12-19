@@ -19,7 +19,7 @@ public class UserController {
     public void saveInfo(User user) {
         Log.i("ControllerInfo", "Saved this: " + user.toString());
 
-        saveSimpleUserData.putString("firstname", user.getFirstname());
+        saveSimpleUserData.putString("firstname", user.getFirstName());
         saveSimpleUserData.putString("surname", user.getSurname());
         saveSimpleUserData.putString("intendedCourse", user.getIntendedCourse());
         saveSimpleUserData.putString("contactNum", user.getPhoneNumber());
@@ -27,7 +27,7 @@ public class UserController {
     }
 
     public void getData(User user) { // used to return user
-        user.setFirstname(preferences.getString("firstname", "--NOT FOUND--"));
+        user.setFirstName(preferences.getString("firstname", "--NOT FOUND--"));
         user.setSurname(preferences.getString("surname", "--NOT FOUND--"));
         user.setIntendedCourse(preferences.getString("intendedCourse", "--NOT FOUND--"));
         user.setPhoneNumber(preferences.getString("contactNum", "--NOT FOUND--"));

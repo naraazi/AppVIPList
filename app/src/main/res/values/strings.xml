@@ -1,6 +1,6 @@
 <resources>
     <string name="str_app_name">VIPList</string>
-    <string name="str_firstname">First Name</string>
+    <string name="str_first_name">First Name</string>
     <string name="str_surname">Surname</string>
     <string name="str_intended_course">Intended Course</string>
     <string name="str_phone_number">Phone Number</string>
@@ -10,4 +10,8 @@
     <string name="str_select_intended_course">Select Intended Course</string>
     <string name="str_splash_image">Splash Image</string>
     <string name="str_welcome_to_viplist">Welcome to VIPList!</string>
+    <string name="str_content_history">Content History</string>
+    <string name="str_empty">Empty</string>
+    <string name="str_clear_content_history">CLEAR CONTENT HISTORY</string>
+    <string name="str_back">BACK</string>
 </resources>
