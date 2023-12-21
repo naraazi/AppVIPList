@@ -1,17 +1,18 @@
 <resources>
-    <string name="str_app_name">VIPList</string>
-    <string name="str_first_name">First Name</string>
-    <string name="str_surname">Surname</string>
-    <string name="str_intended_course">Intended Course</string>
-    <string name="str_phone_number">Phone Number</string>
-    <string name="str_btn_clear">CLEAR</string>
-    <string name="str_btn_save">SAVE</string>
-    <string name="str_btn_submit">SUBMIT</string>
-    <string name="str_select_intended_course">Select Intended Course</string>
-    <string name="str_splash_image">Splash Image</string>
-    <string name="str_welcome_to_viplist">Welcome to VIPList!</string>
-    <string name="str_content_history">Content History</string>
-    <string name="str_empty">Empty</string>
-    <string name="str_clear_content_history">CLEAR CONTENT HISTORY</string>
-    <string name="str_back">BACK</string>
+    <string name="str_VIPList">VIPList</string>
+    <string name="str_First_Name">First Name</string>
+    <string name="str_Surname">Surname</string>
+    <string name="str_Intended_Course">Intended Course</string>
+    <string name="str_Phone_Number">Phone Number</string>
+    <string name="str_CLEAR">CLEAR</string>
+    <string name="str_SAVE">SAVE</string>
+    <string name="str_SUBMIT">SUBMIT</string>
+    <string name="str_Select_Intended_Course">Select Intended Course</string>
+    <string name="str_Splash_Image">Splash Image</string>
+    <string name="str_Welcome_to_VIPList">Welcome to VIPList!</string>
+    <string name="str_Content_History">Content History</string>
+    <string name="str_Empty">Empty</string>
+    <string name="str_CLEAR_CONTENT_HISTORY">CLEAR CONTENT HISTORY</string>
+    <string name="str_BACK">BACK</string>
+    <string name="str_CONTENT_HISTORY">CONTENT HISTORY</string>
 </resources>
