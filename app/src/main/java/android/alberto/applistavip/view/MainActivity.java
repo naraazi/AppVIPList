@@ -6,6 +6,7 @@ import android.alberto.applistavip.R;
 import android.alberto.applistavip.controller.CourseController;
 import android.alberto.applistavip.controller.UserController;
 import android.alberto.applistavip.model.entities.User;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -36,12 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnClear = findViewById(R.id.btnClear);
         Button btnSave = findViewById(R.id.btnSave);
         Button btnSubmit = findViewById(R.id.btnSubmit);
-
-        // SHOW THE DATA ON EDITTEXT PLACE
-        userController.getData(user);
-        editTextFirstName.setText(user.getFirstName());
-        editTextSurname.setText(user.getSurname());
-        editTextContactNum.setText(user.getPhoneNumber());
+        Button btnContentHistory = findViewById(R.id.btnContentHistory);
 
         // ADAPTER
         ArrayAdapter<String> arraySpinnerIntendedCourse = new ArrayAdapter<>(this,
@@ -71,10 +67,16 @@ public class MainActivity extends AppCompatActivity {
             user.setIntendedCourse(spinnerIntendedCourse.getSelectedItem().toString());
             user.setPhoneNumber(editTextContactNum.getText().toString());
             Toast.makeText(MainActivity.this,
-                    "Saved data: " + user.toString(),
+                    "Saved data",
                     Toast.LENGTH_LONG).show();
 
             userController.saveInfo(user);
+        });
+
+        btnContentHistory.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+
+            startActivity(intent);
         });
     }
 }

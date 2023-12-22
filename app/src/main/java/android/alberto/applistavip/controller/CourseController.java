@@ -11,6 +11,10 @@ public class CourseController {
     public List<Course> getListCourses() {
         courseList.add(new Course("Java"));
         courseList.add(new Course("PHP"));
+        courseList.add(new Course("Web Development"));
+        courseList.add(new Course("Android Development"));
+        courseList.add(new Course("Kotlin"));
+        courseList.add(new Course("Ruby"));
 
         return courseList;
     }
