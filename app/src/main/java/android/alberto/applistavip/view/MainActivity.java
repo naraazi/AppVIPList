@@ -53,10 +53,11 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Cleaned", Toast.LENGTH_LONG).show();
 
             userController.clean();
+            userController.saveInfo(user);
         });
 
         btnSubmit.setOnClickListener(v -> {
-            Toast.makeText(MainActivity.this, "Finished", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Submitted", Toast.LENGTH_LONG).show();
 
             finish();
         });
